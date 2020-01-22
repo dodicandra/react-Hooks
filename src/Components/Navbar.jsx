@@ -9,8 +9,10 @@ export default class Navbar extends Component {
         {(authContext) => (
           <ThemeContext.Consumer>
             {(themeContext) => {
+              const { isAuthenticated, toggleAuth } = authContext;
               const { isLightTheme, light, dark } = themeContext;
               const theme = isLightTheme ? light : dark;
+              console.log(authContext);
               return (
                 <nav
                   style={{
@@ -19,6 +21,9 @@ export default class Navbar extends Component {
                   }}
                 >
                   <h1>Context App</h1>
+                  <div onClick={toggleAuth}>
+                    {isAuthenticated ? 'Login' : 'Logout'}
+                  </div>
                   <ul>
                     <li>Home</li>
                     <li>About</li>
