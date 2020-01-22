@@ -10,7 +10,7 @@ const BooksContextProvider = (props) => {
     { title: 'chelsea', author: 'candra', id: 3 },
   ]);
   const addBook = (title, author) => {
-    setBooks([...books, { title, author, id: uuid() }]);
+    setBooks([...books, { title, author: author, id: uuid() }]);
   };
   const removeBook = (id) => {
     setBooks(books.filter((book) => book.id !== id));

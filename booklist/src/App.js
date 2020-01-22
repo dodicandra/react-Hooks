@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import BooksContextProvider from './contexts/BooksContext';
 import Navbar from './Components/Navbar';
 
