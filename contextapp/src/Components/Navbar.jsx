@@ -12,7 +12,6 @@ export default class Navbar extends Component {
               const { isAuthenticated, toggleAuth } = authContext;
               const { isLightTheme, light, dark } = themeContext;
               const theme = isLightTheme ? light : dark;
-              console.log(authContext);
               return (
                 <nav
                   style={{
