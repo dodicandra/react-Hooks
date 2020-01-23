@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react';
 import uuid from 'uuid/v1';
 
-export const BooksContext = createContext();
+const BooksContext = createContext();
 
 const BooksContextProvider = (props) => {
   const [books, setBooks] = useState([
@@ -15,6 +15,7 @@ const BooksContextProvider = (props) => {
   const removeBook = (id) => {
     setBooks(books.filter((book) => book.id !== id));
   };
+
   return (
     <BooksContext.Provider value={{ books, addBook, removeBook }}>
       {props.children}
@@ -22,4 +23,5 @@ const BooksContextProvider = (props) => {
   );
 };
 
+export { BooksContext };
 export default BooksContextProvider;
