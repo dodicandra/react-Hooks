@@ -23,7 +23,7 @@ const BookForm = () => {
   return (
     <form onSubmit={handleSumbit}>
       <input
-        style={{ background: theme.bgIn }}
+        style={{ background: theme.bgIn, color: theme.clr }}
         type="text"
         placeholder="Book title"
         value={title}
@@ -31,7 +31,7 @@ const BookForm = () => {
         required
       />
       <input
-        style={{ background: theme.bgIn }}
+        style={{ background: theme.bgIn, color: theme.clr }}
         type="text"
         placeholder="Author"
         value={author}

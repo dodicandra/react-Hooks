@@ -6,6 +6,7 @@ class ThemeContextProvider extends Component {
   state = {
     isPurple: true,
     purple: {
+      clr: '#eee',
       cl: '#eee',
       bgApp: '#4c2a4c',
       bgNav: '#6d3d6d',
@@ -13,11 +14,12 @@ class ThemeContextProvider extends Component {
       bgBD: '#553055',
     },
     dark: {
+      clr: '#333',
       cl: '#eee',
       bgApp: '#555',
       bgNav: '#333',
       bgIn: '#ddd',
-      bgBD: '#000',
+      bgBD: 'gray',
     },
   };
 
