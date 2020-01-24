@@ -6,7 +6,7 @@ const Navbar = () => {
   console.log(books);
   return (
     <div className="navbar">
-      <h1>dodi reading lsit</h1>
+      <h1>dodi reading list</h1>
       <p>Currenly you have {books.length} books to get through...</p>
     </div>
   );
