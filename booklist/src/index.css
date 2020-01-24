@@ -88,3 +88,9 @@ input[type='submit'] {
   display: block;
   border-radius: 8px;
 }
+.btn {
+  margin: 10px auto;
+  border: 0;
+  padding: 6px 20px;
+  border-radius: 8px;
+}
