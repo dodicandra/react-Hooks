@@ -1,11 +1,17 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, useReducer, useEffect } from 'react';
 import uuid from 'uuid/v1';
 import { bookReducers } from '../reducers/BookReducers';
 
 const BooksContext = createContext();
 
 const BooksContextProvider = (props) => {
-  const [books, dispatch] = useReducer(bookReducers, []);
+  const [books, dispatch] = useReducer(bookReducers, [], () => {
+    const localData = localStorage.getItem('books');
+    return localData ? JSON.parse(localData) : [];
+  });
+  useEffect(() => {
+    localStorage.setItem('books', JSON.stringify(books));
+  });
   return (
     <BooksContext.Provider value={{ books, dispatch }}>
       {props.children}
